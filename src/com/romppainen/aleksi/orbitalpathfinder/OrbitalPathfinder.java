@@ -87,12 +87,12 @@ public class OrbitalPathfinder {
                         // for better performance =)
                         double cheat = 0.001;
                         
-                        points.put(START, new Vector3(latitude, longitude, EARTH_RADIUS, 0.001));
+                        points.put(START, new Vector3(latitude, longitude, EARTH_RADIUS, cheat));
                         
                         latitude = Double.parseDouble(values[3]);
                         longitude = Double.parseDouble(values[4]);
                         
-                        points.put(GOAL, new Vector3(latitude, longitude, EARTH_RADIUS, 0.001));
+                        points.put(GOAL, new Vector3(latitude, longitude, EARTH_RADIUS, cheat));
                     }
                 }
             } while (line != null);
