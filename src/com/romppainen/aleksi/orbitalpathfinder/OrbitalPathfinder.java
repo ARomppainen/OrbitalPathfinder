@@ -148,7 +148,7 @@ public class OrbitalPathfinder {
         
         Vector3 p = new Vector3(p1);
         double traveled = 0;
-        double minStep = 0.000000001;
+        double minStep = 0.0001;
         
         while(true) {
             double distToEarth = p.length() - EARTH_RADIUS;
@@ -242,7 +242,7 @@ public class OrbitalPathfinder {
      */
     private void printGraph() {
         for (String s1: graph.keySet()) {
-            System.out.println(s1);
+            System.out.println(s1 + " " + graph.get(s1).coords);
                 
             for (Connection c: graph.get(s1).connections) {
                 System.out.println("   " + c.to);

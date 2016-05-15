@@ -54,7 +54,7 @@ public class Vector3 {
         z = B.z - A.z;
     }
     
-    // https://en.wikipedia.org/wiki/Spherical_coordinate_system#Cartesian_coordinates
+    // http://astro.uchicago.edu/cosmus/tech/latlong.html
     /**
      * Constructs a vector using latitude, longitude, radius and altitude.
      * 
@@ -68,9 +68,9 @@ public class Vector3 {
         double lat = Math.toRadians(latitude);
         double lon = Math.toRadians(longitude);
         
-        x = r * Math.sin(lat) * Math.cos(lon) ;
-        y = r * Math.sin(lat) * Math.sin(lon);
-        z = r * Math.cos(lat);
+        x = -r * Math.cos(lat) * Math.cos(lon);
+        y = r * Math.sin(lat);
+        z = r * Math.cos(lat) * Math.sin(lon);
     }
     
     /**
